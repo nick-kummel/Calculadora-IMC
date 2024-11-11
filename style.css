@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f1f1f196;
+    padding: 20px 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.5s;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+section:not(#saibamais) {
+    padding: 100px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#inicio {
+    background-image: url(https://falandodeobesidade.com/wp-content/uploads/2022/02/Depositphotos_121622358_XL-1-1920x1165-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #eeeeee;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#saibamais {
+    
+}
+
+
+ h1 {
+    font-size: 5.5em;
+    color: black;
+ }

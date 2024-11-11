@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul type="square">
+            <li><a href="#inicio">Ínicio</a></li>
+            <li><a href="#saibamais">Saiba Mais (imc)</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+    <header>
+        <section id="inicio">
+            <h1>Índice de Massa Corporal</h1>
+        </section>
+        <section id="saibamais">
+            <h2>Saiba mais sobre a Índice de Massa Corporal (IMC)</h2>
+
+            <p>Ele é uma maneira padronizada internacionalmente para determinar se um indivíduo esta com seu peso
+                adequado
+                ou se ele é obeso. Calcular IMC é o método utilizado pela OMS (Organização Mundial de Saúde) em estudos
+                epidemiológicos. Entretanto apresenta pouca fidedignidade, pois o mesmo não difere a massa magra da
+                massa
+                gorda. Isso pode ser observado em um atleta com grande quantidade de massa magra que ao calcular IMC
+                mostrará um resultado acima do desejável, por conta da massa muscular e não do excesso de gordura. Por
+                isso,
+                determinar o seu peso ideal vai muito além do que calcular IMC que você deveria estar. Nem sempre estar
+                acima do peso é um sinal de problema.
+
+                Para determinar se o seu índice é um risco à saúde, um profissional de saúde realiza avaliações
+                adicionais
+                além de calcular IMC. Essas avaliações incluem medidas de espessura de dobras cutâneas, estimativa da
+                massa
+                muscular, medida da circunferência abdominal, avaliações de dieta, atividade física e história familiar.
+                Esse conjunto é muito mais preciso para avaliar o seu estado nutricional do que apenas calcular o IMC.
+            </p>
+        </section>
+    </header>
+    <section id="calculadora">
+        <h2>Calculadora para ver seu peso ideial:</h2>
+        <p>O índice de massa corporal (IMC) é uma medida que usa sua altura e peso para saber se seu peso é saudável. O
+            IMC
+            leva em consideração as variações naturais na forma do corpo, dando uma faixa de peso saudável para uma
+            determinada altura. </p>
+
+        <h2>Qual seu peso e sua altura?</h2>
+        <div>
+            <label for="altura"> Altura:</label>
+            <input type="number" name="altura" id="altura">
+
+            <label for="peso"> Peso (kg):</label>
+            <input type="number" name="peso" id="peso">
+
+            <button onclick="calcImc()"> Calcular IMC </button>
+
+            <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+
+            <button class="button" onclick="mudarCor()">Mudar as Cores</button>
+        </div>
+    </section>
+    <script>
+        function calcImc() {
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+
+        }
+
+        function mudarTema() {
+            const corpo = document.getElementById("corpo");
+
+            corpo.style.backgroundColor = corpo.style.backgroundColor === "blue" ? "pink" : "blue";
+        }
+    </script>
+
+    <footer>&copy; Direitos reservados | 2024 </footer>
+</body>
+
+</html>
